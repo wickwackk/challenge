@@ -1,0 +1,35 @@
+.pagination {
+  width: 30%;
+  border-top: 1px solid rgba(128, 128, 128, 0.454);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.466);
+  padding: 10px 0;
+  text-align: center;
+}
+
+.btnInactive:hover {
+  background: rgba(128, 128, 128, 0.19);
+  color: red;
+  border-bottom: 2px solid red;
+  height: 38px;
+}
+.btnInactive {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: rgba(128, 128, 128, 0.466);
+  height: 40px;
+  font-size: 18px;
+}
+
+.btnActive {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: rgba(128, 128, 128, 0.466);
+  height: 40px;
+  font-size: 18px;
+  background: rgba(128, 128, 128, 0.19);
+  color: red;
+  border-bottom: 2px solid red;
+  height: 38px;
+}
