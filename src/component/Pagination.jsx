@@ -11,7 +11,7 @@ export default function Pagination() {
   );
 
   useEffect(() => {
-    setCurrentPage(Number(pageNumber));
+    setCurrentPage(pageNumber ? Number(pageNumber) : 1);
   }, [pageNumber]);
 
   console.log(pageNumber);
