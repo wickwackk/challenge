@@ -1,0 +1,5 @@
+.page {
+  font-size: 30px;
+  justify-self: flex-start;
+  min-height: 40vh;
+}

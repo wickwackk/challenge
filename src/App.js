@@ -1,22 +1,26 @@
-import { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Route, Routes, useParams } from "react-router-dom";
 import "./App.css";
 import Page from "./component/Page";
 import Pagination from "./component/Pagination";
 
 function App() {
-  const [pagenum, setPageNum] = useState();
+  const [currentPage, setCurrentPage] = useState();
   return (
     <div className="App">
-      <Routes>
-        <Route
-          path="/page/:pageNumber"
-          element={<Page setPageNum={setPageNum} />}
-        />
-      </Routes>
       <div className="pageExt">
-        <Pagination pagenum={pagenum} />
+        <Routes>
+          <Route path="/" element={<Pagination />}>
+            <Route path="/page/*">
+              <Route index element={<Page />} />
+              <Route path=":pageNumber" element={<Page />} />
+            </Route>
+          </Route>
+        </Routes>
       </div>
+      {/* <div className="pageExt">
+        <Pagination />
+      </div> */}
     </div>
   );
 }

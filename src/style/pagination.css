@@ -1,9 +1,10 @@
 .pagination {
-  width: 30%;
+  width: 50%;
   border-top: 1px solid rgba(128, 128, 128, 0.454);
   border-bottom: 1px solid rgba(128, 128, 128, 0.466);
   padding: 10px 0;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .btnInactive:hover {
@@ -32,4 +33,12 @@
   color: red;
   border-bottom: 2px solid red;
   height: 38px;
+}
+
+.innerpages {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 80%;
+  justify-content: center;
 }
